@@ -15,6 +15,7 @@ public class Main {
         // provide the xml config file in the classpath
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring.xml");
 
+        // getting the beans from spring.xml file
         Doctor doctor = applicationContext.getBean(Doctor.class);
         doctor.assist();
 
@@ -22,8 +23,14 @@ public class Main {
         nurse.assist();
 
         // can also do it like this
-        // have to cast it into the required type since it requesting for the object
+        // has to cast it into the required type since it requesting for the object
         // provides --> class       cast --> object
         Nurse nurse1 = (Nurse) applicationContext.getBean("nurse");
+        nurse1.assist();
+
+        // using the interface
+        Staff staff = applicationContext.getBean(Doctor.class);
+        staff.assist();
+
     }
 }
