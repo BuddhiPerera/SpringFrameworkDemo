@@ -32,5 +32,8 @@ public class Main {
         Staff staff = applicationContext.getBean(Doctor.class);
         staff.assist();
 
+        // after adding properties from xml
+        Doctor doctor1 = applicationContext.getBean(Doctor.class);
+        System.out.println(doctor1.getQualification());
     }
 }

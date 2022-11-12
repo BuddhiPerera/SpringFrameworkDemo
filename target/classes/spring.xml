@@ -8,6 +8,8 @@
 
     <!-- bean definitions here -->
 
-    <bean id="doctor" class="demo.Doctor"></bean>
+    <bean id="doctor" class="demo.Doctor">
+        <property name="qualification" value="MBBS"></property>
+    </bean>
     <bean id="nurse" class="demo.Nurse"></bean>
 </beans>
