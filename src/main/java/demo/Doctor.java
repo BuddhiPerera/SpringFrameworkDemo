@@ -7,6 +7,10 @@ public class Doctor implements Staff{
     // adding an object (for example purpose)
     private Nurse nurse;
 
+    public Doctor(String qualification) {
+        this.qualification = qualification;
+    }
+
     public void assist(){
         System.out.println("Doctor is assisting");
     }
